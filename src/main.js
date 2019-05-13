@@ -9,6 +9,7 @@ import { messages } from "./components/common/i18n";
 import "./assets/css/icon.css";
 import "./components/common/directives";
 import "@babel/polyfill";
+import './assets/css/theme/element-variables.scss';
 
 Vue.config.productionTip = false;
 Vue.use(VueI18n);

@@ -1,13 +1,14 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Loading from 'components/loading'
+import Loading from 'components/loading';
+import SideLayout from '@/layout/sideLayout';
+
 
 Vue.use(Router);
-// const Home = () => ({
-//     component: import('@/pages/home/index'),
-//     loading: Loading
-// });
-console.log(process.env.BASE_URL)
+const Home = () => ({
+    component: import('@/pages/home/index'),
+    loading: Loading
+});
 export default new Router({
     mode: 'history',  //路由配置，不设置默认为hash
     base: process.env.BASE_URL,
@@ -18,7 +19,7 @@ export default new Router({
         },
         {
             path: '/',
-            component: resolve => require(['../components/common/Home.vue'], resolve),
+            component: SideLayout,
             meta: { title: '自述文件' },
             children:[
                 {

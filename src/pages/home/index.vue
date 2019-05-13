@@ -25,5 +25,5 @@ methods:{
 }
 }
 </script>
-<style src="./style.less" lang="less" scope></style>
+<style src="./style.scss" lang="scss" scope></style>
 
