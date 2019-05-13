@@ -1,0 +1,88 @@
+{
+  "success": true,
+  "message": "执行成功~~",
+  "data": {
+    "topNav": [{
+        "id": 3,
+        "parentId": 1,
+        "permissionName": "首页",
+        "permissionIcon": "",
+        "permissionUrl": "/",
+        "children": []
+      },
+      {
+        "id": 6,
+        "parentId": 2,
+        "permissionName": "API市场",
+        "permissionIcon": "",
+        "permissionUrl": "/api/all/inner",
+        "children": [{
+            "id": 8,
+            "parentId": 0,
+            "permissionName": "所有服务",
+            "permissionIcon": "gaojinglishi",
+            "permissionUrl": "/api/all",
+            "children": [{
+                "id": 3,
+                "parentId": 1,
+                "permissionName": "内部API",
+                "permissionIcon": "",
+                "permissionUrl": "/api/all/inner",
+                "children": []
+              },
+              {
+                "id": 3,
+                "parentId": 1,
+                "permissionName": "外部API",
+                "permissionIcon": "",
+                "permissionUrl": "/api/all/outer",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": 8,
+            "parentId": 0,
+            "permissionName": "服务发布",
+            "permissionIcon": "gaojinglishi",
+            "permissionUrl": "/api/publish",
+            "children": []
+          },
+          {
+            "id": 8,
+            "parentId": 0,
+            "permissionName": "服务导入",
+            "permissionIcon": "gaojinglishi",
+            "permissionUrl": "/api/export",
+            "children": []
+          }
+        ]
+
+      },
+      {
+        "id": 3,
+        "parentId": 1,
+        "permissionName": "后台管理",
+        "permissionIcon": "",
+        "permissionUrl": "/back/form",
+        "children": []
+      },
+      {
+        "id": 3,
+        "parentId": 1,
+        "permissionName": "技术支持",
+        "permissionIcon": "",
+        "permissionUrl": "/back/form",
+        "children": []
+      },
+      {
+        "id": 3,
+        "parentId": 1,
+        "permissionName": "论坛",
+        "permissionIcon": "",
+        "permissionUrl": "/back/form",
+        "children": []
+      }
+    ]
+  }
+}
