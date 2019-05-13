@@ -3,26 +3,20 @@ import router from "./router";
 import axios from "axios";
 import Element from "element-ui";
 import GlobalLayout from "@/layout/globalLayout";
-import VueI18n from "vue-i18n";
 import store from "./store/index";
-import { messages } from "./components/common/i18n";
-import "./assets/css/icon.css";
-import "./components/common/directives";
 import "@babel/polyfill";
+import "./assets/css/icon.css";
 import './assets/css/theme/element-variables.scss';
+import {API} from '@/api';
 
 Vue.config.productionTip = false;
-Vue.use(VueI18n);
 Vue.use(Element, {
   size: "small"
 });
-Vue.prototype.$axios = axios;
 
-const i18n = new VueI18n({
-  // vue-i18n 国际化
-  locale: "zh",
-  messages
-});
+Vue.prototype.$axios = axios;
+Vue.prototype.$API = API;
+
 
 //使用钩子函数对路由进行权限跳转
 router.beforeEach((to, from, next) => {
