@@ -38,24 +38,24 @@
                 collapse: false,
                 items: [
                     {
-                        icon: 'el-icon-lx-home',
-                        index: 'dashboard',
-                        title: '系统首页'
+                        icon: 'el-icon-s-home',
+                        index: 'home',
+                        title: '首页'
                     },
                     {
-                        icon: 'el-icon-lx-cascades',
-                        index: 'table',
-                        title: '基础表格'
+                        icon: 'el-icon-s-marketing',
+                        index: 'marketing',
+                        title: '数据看板'
                     },
                     {
-                        icon: 'el-icon-lx-copy',
-                        index: 'tabs',
-                        title: 'tab选项卡'
+                        icon: 'el-icon-s-data',
+                        index: 'dataAnalysise',
+                        title: '数据分析'
                     },
                     {
-                        icon: 'el-icon-lx-calendar',
-                        index: '3',
-                        title: '表单相关',
+                        icon: 'el-icon-s-custom',
+                        index: 'custom',
+                        title: '客户管理',
                         subs: [
                             {
                                 index: 'form',
@@ -82,19 +82,19 @@
                         ]
                     },
                     {
-                        icon: 'el-icon-lx-emoji',
-                        index: 'icon',
-                        title: '自定义图标'
+                        icon: 'el-icon-suitcase',
+                        index: 'studentMessage',
+                        title: '学生档案'
                     },
                     {
-                        icon: 'el-icon-pie-chart',
-                        index: 'charts',
-                        title: 'schart图表'
+                        icon: 'el-icon-collection-tag',
+                        index: 'tagMessage',
+                        title: '标签管理'
                     },
                     {
-                        icon: 'el-icon-rank',
-                        index: '6',
-                        title: '拖拽组件',
+                        icon: 'el-icon-user-solid',
+                        index: 'authMessage',
+                        title: '权限管理',
                         subs: [
                             {
                                 index: 'drag',
@@ -107,24 +107,9 @@
                         ]
                     },
                     {
-                        icon: 'el-icon-lx-global',
-                        index: 'i18n',
-                        title: '国际化功能'
-                    },
-                    {
-                        icon: 'el-icon-lx-warn',
-                        index: '7',
-                        title: '错误处理',
-                        subs: [
-                            {
-                                index: 'permission',
-                                title: '权限测试'
-                            },
-                            {
-                                index: '404',
-                                title: '404页面'
-                            }
-                        ]
+                        icon: 'el-icon-document-copy',
+                        index: 'operationLog',
+                        title: '操作日志'
                     }
                 ]
             }

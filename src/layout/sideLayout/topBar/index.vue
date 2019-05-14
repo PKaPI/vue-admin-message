@@ -5,7 +5,7 @@
             <i :class="{'el-icon-s-fold':collapse,'el-icon-s-unfold':!collapse}"></i>
             
         </div>
-        <div class="logo">后台管理系统</div>
+        <div class="logo">好学科技</div>
         <div class="header-right">
             <div class="header-user-con">
                 <!-- 全屏显示 -->

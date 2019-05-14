@@ -9,6 +9,10 @@ const Home = () => ({
     component: import('@/pages/home/index'),
     loading: Loading
 });
+const Login = () => ({
+    component: import('@/pages/login/index'),
+    loading: Loading
+});
 const Permission = () => ({
     component: import('@/pages/error/Permission'),
     loading: Loading
@@ -59,7 +63,7 @@ export default new Router({
         },
         {
             path: '/login',
-            component: resolve => require(['../components/page/Login.vue'], resolve)
+            component: Login
         },
         {
             path: '*',
