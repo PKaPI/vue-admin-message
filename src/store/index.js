@@ -7,8 +7,8 @@ import getters from './getters'
 Vue.use(Vuex)
 const store = new Vuex.Store({
   modules: {
-    global,
-    home,
+    global:global,
+    home:home,
   },
   getters
 })

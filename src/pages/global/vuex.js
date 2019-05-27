@@ -1,6 +1,7 @@
 import { API } from "@/api/index.js";
 
 const global = {
+  // namespaced: true,
   state: {
     navData:[],
     sideBar:{
@@ -17,7 +18,8 @@ const global = {
   },
   actions: {
     getNavData({ commit }, params,cb) {
-      API.getNavData({}).then(ret=>{
+      console.log(params)
+      API.getNavData(params).then(ret=>{
         commit('GET_NAV_DATA', ret.data.topNav||[]);
       })
    },

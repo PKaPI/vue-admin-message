@@ -8,12 +8,9 @@ module.exports = {
   productionSourceMap: false,
   devServer: {
     proxy: {
-      "/api": {
-        target: "168.12.2.1",
+      "/crm": {
+        target: "http://192.168.20.182:8080",
         changeOrigin: true,
-        pathRewrite: {
-          "/api": ""
-        }
       }
     }
   },

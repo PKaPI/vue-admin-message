@@ -35,10 +35,8 @@ export default {
     vTags
   },
   mounted() {
-    this.$store.dispatch("getNavData");
-    API.getNavData({}).then(res=>{
-      console.log(res)
-    })
+    console.log(this.$store)
+    this.$store.dispatch("getNavData",{name:'papa'});
   },
   created() {
     this.$root.Bus.$on("collapse", msg => {

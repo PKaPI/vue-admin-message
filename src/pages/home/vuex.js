@@ -2,6 +2,7 @@ import { API } from "@/api/index.js";
 
 
 const home = {
+  namespaced: true,
   state: {
     homeData:[]
   },
