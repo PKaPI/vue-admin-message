@@ -119,7 +119,6 @@
         overflow: hidden;
         background: #fff;
         padding-right: 120px;
-        margin-top: 6px;
         box-shadow: 0 5px 10px #ddd;
     }
 

@@ -1,20 +1,16 @@
 <template>
   <div class="wrapper">
-    <div class="main-layout">
-      <section class="side-layout">
-        <v-sidebar></v-sidebar>
-      </section>
-      <section class="content-layout" :class="{'content-collapse':collapse}">
-        <v-head></v-head>
-        <v-tags></v-tags>
-        <div class="content">
-          <transition name="move" mode="out-in">
-            <keep-alive :include="tagsList">
-              <router-view></router-view>
-            </keep-alive>
-          </transition>
-        </div>
-      </section>
+    <v-head></v-head>
+    <v-sidebar></v-sidebar>
+    <div class="content-box" :class="{'content-collapse':collapse}">
+      <v-tags></v-tags>
+      <div class="content">
+        <transition name="move" mode="out-in">
+          <keep-alive :include="tagsList">
+            <router-view></router-view>
+          </keep-alive>
+        </transition>
+      </div>
     </div>
   </div>
 </template>
@@ -24,7 +20,7 @@ import vHead from "./topBar";
 import vSidebar from "./sideBar";
 import vTags from "./tags";
 import { mapState } from "vuex";
-import { API } from "@/api";
+import {API} from '@/api';
 
 export default {
   data() {
@@ -39,8 +35,8 @@ export default {
     vTags
   },
   mounted() {
-    console.log(this.$store);
-    this.$store.dispatch("getNavData", { name: "papa" });
+    console.log(this.$store)
+    this.$store.dispatch("getNavData",{name:'papa'});
   },
   created() {
     this.$root.Bus.$on("collapse", msg => {
@@ -61,5 +57,3 @@ export default {
   })
 };
 </script>
-<style lang="scss" src='./style.scss' scope></style>
-

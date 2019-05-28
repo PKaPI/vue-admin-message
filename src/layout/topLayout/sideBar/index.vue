@@ -1,6 +1,5 @@
 <template>
     <div class="sidebar">
-        <div class="logo_wrap" :class="{'collapse':collapse}">后端管理系统</div>
         <el-menu class="sidebar-el-menu" :default-active="onRoutes" :collapse="collapse" background-color="#324157"
             text-color="#bfcbd9" active-text-color="#20a0ff" unique-opened router>
             <template v-for="item in items">
@@ -134,31 +133,9 @@
         display: block;
         position: absolute;
         left: 0;
-        top: 0;
+        top: 70px;
         bottom:0;
-        background: #f0f2f5;
-        box-shadow: 4px 0 6px rgba(0,21,41,.35);
-        z-index: 10;
         overflow-y: scroll;
-    }
-    .logo_wrap{
-        height: 70px;
-        padding-left: 24px;
-        overflow: hidden;
-        box-sizing: border-box; 
-        line-height: 70px;
-        background: #002140;
-        transition: all .3s;
-        font-weight: 600;
-        width: 250px;
-        font-size: 20px;
-        color:#fff;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        transition: all .3s ease-in-out;
-    }
-    .collapse{
-        width: 64px;
     }
     .sidebar::-webkit-scrollbar{
         width: 0;

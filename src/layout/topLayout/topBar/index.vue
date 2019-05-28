@@ -5,6 +5,7 @@
             <i :class="{'el-icon-s-fold':collapse,'el-icon-s-unfold':!collapse}"></i>
             
         </div>
+        <div class="logo">后端管理系统</div>
         <div class="header-right">
             <div class="header-user-con">
                 <!-- 全屏显示 -->
@@ -108,19 +109,13 @@
         width: 100%;
         height: 70px;
         font-size: 22px;
-        color: #333;
-        background: #fff;
-        box-shadow: 0 1px 4px rgba(0,21,41,.08);
+        color: #fff;
     }
     .collapse-btn{
         float: left;
         padding: 0 21px;
         cursor: pointer;
         line-height: 70px;
-
-    }
-    .collapse-btn:hover{
-        background: rgba(0,0,0,.025);
     }
     .header .logo{
         float: left;
@@ -157,10 +152,10 @@
         height: 8px;
         border-radius: 4px;
         background: #f56c6c;
-        color: #333;
+        color: #fff;
     }
     .btn-bell .el-icon-bell{
-        color: #333;
+        color: #fff;
     }
     .user-name{
         margin-left: 10px;
@@ -175,7 +170,7 @@
         border-radius: 50%;
     }
     .el-dropdown-link{
-        color: #333;
+        color: #fff;
         cursor: pointer;
     }
     .el-dropdown-menu__item{
