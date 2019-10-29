@@ -4,7 +4,6 @@ import axios from "axios";
 import Element from "element-ui";
 import GlobalLayout from "@/layout/globalLayout";
 import store from "./store/index";
-import "@babel/polyfill";
 import "./assets/css/icon.css";
 import './assets/css/theme/element-variables.scss';
 import {API} from '@/api';

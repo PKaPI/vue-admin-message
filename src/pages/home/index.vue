@@ -4,7 +4,7 @@
       <el-col :span="8">
         <el-card shadow="hover" class="mgb20" style="height:252px;">
           <div class="user-info">
-            <img src="../../assets/img/img.jpg" class="user-avator" alt>
+            <img src="../../assets/img/img.jpeg" class="user-avator" alt>
             <div class="user-info-cont">
               <div class="user-info-name">{{name}}</div>
               <div>{{role}}</div>
@@ -16,7 +16,7 @@
           </div>
           <div class="user-info-list">
             上次登录地点：
-            <span>东莞</span>
+            <span>杭州</span>
           </div>
         </el-card>
         <el-card shadow="hover" style="height:252px;">

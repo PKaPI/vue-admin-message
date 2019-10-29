@@ -1,5 +1,5 @@
 ## 项目说明
-1、 基于vue-cli3构建的vue、element-ui、vuex、vue-router后端管理系统
+1、 基于vue-cli3构建的vue、element-ui、vuex、vue-router 中台项目架构
 
 2、 安装依赖包。
 ```
@@ -9,9 +9,9 @@ npm install  或者cnpm install 或者yarn(推荐)
 ```
 3、运行脚手架。
 ```js
- 1.npm run dev //或者 npm run start 启动开发环境
-
- 2.npm run build //打包静态文件,输出到dist文件夹
+ 1.npm run dll // 运行dll命令，生产动态链接库文件
+ 2.npm run dev //或者 npm run start 启动开发环境
+ 3.npm run build //打包静态文件,输出到dist文件夹
 
  ```
  ## 项目目录结构说明
