@@ -7,12 +7,12 @@ import store from "./store/index";
 import "./assets/css/icon.css";
 import './assets/css/theme/element-variables.scss';
 import {API} from '@/api';
-
+import echarts from 'echarts'
 Vue.config.productionTip = false;
 Vue.use(Element, {
   size: "small"
 });
-
+Vue.prototype.$echarts = echarts
 Vue.prototype.$axios = axios;
 Vue.prototype.$API = API;
 

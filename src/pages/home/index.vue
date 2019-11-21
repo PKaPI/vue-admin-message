@@ -65,9 +65,9 @@
             </el-card>
           </el-col>
         </el-row>
-        <el-card shadow="hover" style="height:403px;">
+        <el-card shadow="hover" style="height:403px;" v-checkVisible="authCodes['category']">
           <div slot="header" class="clearfix">
-            <span>待办事项</span>
+            <span class="required">待办事项</span>
             <el-button style="float: right; padding: 3px 0" type="text">添加</el-button>
           </div>
           <el-table
@@ -131,649 +131,30 @@
 <script>
 import Schart from "vue-schart";
 import shortid from "shortid";
-const treeData = [
-  {
-    id: "1301",
-    typeId: "13",
-    value: "1",
-    name: "一岁",
-    parentId: "0",
-    comment: "一岁",
-    dictDetailList: [
-      {
-        id: "130128",
-        typeId: "13",
-        value: "28",
-        name: "九个月",
-        parentId: "1301",
-        comment: "一岁-九个月",
-        dictDetailList: null
-      },
-      {
-        id: "130129",
-        typeId: "13",
-        value: "29",
-        name: "十个月",
-        parentId: "1301",
-        comment: "一岁-十个月",
-        dictDetailList: null
-      },
-      {
-        id: "130130",
-        typeId: "13",
-        value: "30",
-        name: "十一个月",
-        parentId: "1301",
-        comment: "一岁-十一个月",
-        dictDetailList: null
-      },
-      {
-        id: "130131",
-        typeId: "13",
-        value: "31",
-        name: "十二个月",
-        parentId: "1301",
-        comment: "一岁-十二个月",
-        dictDetailList: null
-      },
-      {
-        id: "130120",
-        typeId: "13",
-        value: "20",
-        name: "一个月",
-        parentId: "1301",
-        comment: "一岁-一个月",
-        dictDetailList: null
-      },
-      {
-        id: "130121",
-        typeId: "13",
-        value: "21",
-        name: "二个月",
-        parentId: "1301",
-        comment: "一岁-二个月",
-        dictDetailList: null
-      },
-      {
-        id: "130122",
-        typeId: "13",
-        value: "22",
-        name: "三个月",
-        parentId: "1301",
-        comment: "一岁-三个月",
-        dictDetailList: null
-      },
-      {
-        id: "130123",
-        typeId: "13",
-        value: "23",
-        name: "四个月",
-        parentId: "1301",
-        comment: "一岁-四个月",
-        dictDetailList: null
-      },
-      {
-        id: "130124",
-        typeId: "13",
-        value: "24",
-        name: "五个月",
-        parentId: "1301",
-        comment: "一岁-五个月",
-        dictDetailList: null
-      },
-      {
-        id: "130125",
-        typeId: "13",
-        value: "25",
-        name: "六个月",
-        parentId: "1301",
-        comment: "一岁-六个月",
-        dictDetailList: null
-      },
-      {
-        id: "130126",
-        typeId: "13",
-        value: "26",
-        name: "七个月",
-        parentId: "1301",
-        comment: "一岁-七个月",
-        dictDetailList: null
-      }
-    ]
-  },
-  {
-    id: "1302",
-    typeId: "13",
-    value: "2",
-    name: "二岁",
-    parentId: "0",
-    comment: "二岁",
-    dictDetailList: [
-      {
-        id: "130127",
-        typeId: "13",
-        value: "27",
-        name: "八个月",
-        parentId: "1302",
-        comment: "一岁-八个月",
-        dictDetailList: null
-      },
-      {
-        id: "130232",
-        typeId: "13",
-        value: "32",
-        name: "一个月",
-        parentId: "1302",
-        comment: "二岁-一个月",
-        dictDetailList: null
-      },
-      {
-        id: "130233",
-        typeId: "13",
-        value: "33",
-        name: "二个月",
-        parentId: "1302",
-        comment: "二岁-二个月",
-        dictDetailList: null
-      },
-      {
-        id: "130234",
-        typeId: "13",
-        value: "34",
-        name: "三个月",
-        parentId: "1302",
-        comment: "二岁-三个月",
-        dictDetailList: null
-      },
-      {
-        id: "130235",
-        typeId: "13",
-        value: "35",
-        name: "四个月",
-        parentId: "1302",
-        comment: "二岁-四个月",
-        dictDetailList: null
-      },
-      {
-        id: "130236",
-        typeId: "13",
-        value: "36",
-        name: "五个月",
-        parentId: "1302",
-        comment: "二岁-五个月",
-        dictDetailList: null
-      },
-      {
-        id: "130237",
-        typeId: "13",
-        value: "37",
-        name: "六个月",
-        parentId: "1302",
-        comment: "二岁-六个月",
-        dictDetailList: null
-      },
-      {
-        id: "130238",
-        typeId: "13",
-        value: "38",
-        name: "七个月",
-        parentId: "1302",
-        comment: "二岁-七个月",
-        dictDetailList: null
-      },
-      {
-        id: "130239",
-        typeId: "13",
-        value: "39",
-        name: "八个月",
-        parentId: "1302",
-        comment: "二岁-八个月",
-        dictDetailList: null
-      },
-      {
-        id: "130240",
-        typeId: "13",
-        value: "40",
-        name: "九个月",
-        parentId: "1302",
-        comment: "二岁-九个月",
-        dictDetailList: null
-      },
-      {
-        id: "130241",
-        typeId: "13",
-        value: "41",
-        name: "十个月",
-        parentId: "1302",
-        comment: "二岁-十个月",
-        dictDetailList: null
-      },
-      {
-        id: "130242",
-        typeId: "13",
-        value: "42",
-        name: "十一个月",
-        parentId: "1302",
-        comment: "二岁-十一个月",
-        dictDetailList: null
-      },
-      {
-        id: "130243",
-        typeId: "13",
-        value: "43",
-        name: "十二个月",
-        parentId: "1302",
-        comment: "二岁-十二个月",
-        dictDetailList: null
-      }
-    ]
-  },
-  {
-    id: "1303",
-    typeId: "13",
-    value: "3",
-    name: "三岁",
-    parentId: "0",
-    comment: "三岁",
-    dictDetailList: [
-      {
-        id: "130344",
-        typeId: "13",
-        value: "44",
-        name: "一个月",
-        parentId: "1303",
-        comment: "三岁-一个月",
-        dictDetailList: null
-      },
-      {
-        id: "130345",
-        typeId: "13",
-        value: "45",
-        name: "二个月",
-        parentId: "1303",
-        comment: "三岁-二个月",
-        dictDetailList: null
-      },
-      {
-        id: "130346",
-        typeId: "13",
-        value: "46",
-        name: "三个月",
-        parentId: "1303",
-        comment: "三岁-三个月",
-        dictDetailList: null
-      },
-      {
-        id: "130347",
-        typeId: "13",
-        value: "47",
-        name: "四个月",
-        parentId: "1303",
-        comment: "三岁-四个月",
-        dictDetailList: null
-      },
-      {
-        id: "130348",
-        typeId: "13",
-        value: "48",
-        name: "五个月",
-        parentId: "1303",
-        comment: "三岁-五个月",
-        dictDetailList: null
-      },
-      {
-        id: "130349",
-        typeId: "13",
-        value: "49",
-        name: "六个月",
-        parentId: "1303",
-        comment: "三岁-六个月",
-        dictDetailList: null
-      },
-      {
-        id: "130350",
-        typeId: "13",
-        value: "50",
-        name: "七个月",
-        parentId: "1303",
-        comment: "三岁-七个月",
-        dictDetailList: null
-      },
-      {
-        id: "130351",
-        typeId: "13",
-        value: "51",
-        name: "八个月",
-        parentId: "1303",
-        comment: "三岁-八个月",
-        dictDetailList: null
-      },
-      {
-        id: "130352",
-        typeId: "13",
-        value: "52",
-        name: "九个月",
-        parentId: "1303",
-        comment: "三岁-九个月",
-        dictDetailList: null
-      },
-      {
-        id: "130353",
-        typeId: "13",
-        value: "53",
-        name: "十个月",
-        parentId: "1303",
-        comment: "三岁-十个月",
-        dictDetailList: null
-      },
-      {
-        id: "130354",
-        typeId: "13",
-        value: "54",
-        name: "十一个月",
-        parentId: "1303",
-        comment: "三岁-十一个月",
-        dictDetailList: null
-      },
-      {
-        id: "130355",
-        typeId: "13",
-        value: "55",
-        name: "十二个月",
-        parentId: "1303",
-        comment: "三岁-十二个月",
-        dictDetailList: null
-      }
-    ]
-  },
-  {
-    id: "1304",
-    typeId: "13",
-    value: "4",
-    name: "四岁",
-    parentId: "0",
-    comment: "四岁",
-    dictDetailList: [
-      {
-        id: "130456",
-        typeId: "13",
-        value: "56",
-        name: "一个月",
-        parentId: "1304",
-        comment: "四岁-一个月",
-        dictDetailList: null
-      },
-      {
-        id: "130457",
-        typeId: "13",
-        value: "57",
-        name: "二个月",
-        parentId: "1304",
-        comment: "四岁-二个月",
-        dictDetailList: null
-      },
-      {
-        id: "130458",
-        typeId: "13",
-        value: "58",
-        name: "三个月",
-        parentId: "1304",
-        comment: "四岁-三个月",
-        dictDetailList: null
-      },
-      {
-        id: "130459",
-        typeId: "13",
-        value: "59",
-        name: "四个月",
-        parentId: "1304",
-        comment: "四岁-四个月",
-        dictDetailList: null
-      },
-      {
-        id: "130460",
-        typeId: "13",
-        value: "60",
-        name: "五个月",
-        parentId: "1304",
-        comment: "四岁-五个月",
-        dictDetailList: null
-      },
-      {
-        id: "130461",
-        typeId: "13",
-        value: "61",
-        name: "六个月",
-        parentId: "1304",
-        comment: "四岁-六个月",
-        dictDetailList: null
-      },
-      {
-        id: "130462",
-        typeId: "13",
-        value: "62",
-        name: "七个月",
-        parentId: "1304",
-        comment: "四岁-七个月",
-        dictDetailList: null
-      },
-      {
-        id: "130463",
-        typeId: "13",
-        value: "63",
-        name: "八个月",
-        parentId: "1304",
-        comment: "四岁-八个月",
-        dictDetailList: null
-      },
-      {
-        id: "130464",
-        typeId: "13",
-        value: "64",
-        name: "九个月",
-        parentId: "1304",
-        comment: "四岁-九个月",
-        dictDetailList: null
-      },
-      {
-        id: "130465",
-        typeId: "13",
-        value: "65",
-        name: "十个月",
-        parentId: "1304",
-        comment: "四岁-十个月",
-        dictDetailList: null
-      },
-      {
-        id: "130466",
-        typeId: "13",
-        value: "66",
-        name: "十一个月",
-        parentId: "1304",
-        comment: "四岁-十一个月",
-        dictDetailList: null
-      },
-      {
-        id: "130467",
-        typeId: "13",
-        value: "67",
-        name: "十二个月",
-        parentId: "1304",
-        comment: "四岁-十二个月",
-        dictDetailList: null
-      }
-    ]
-  },
-  {
-    id: "1305",
-    typeId: "13",
-    value: "5",
-    name: "幼儿园小班",
-    parentId: "0",
-    comment: "幼儿园小班",
-    dictDetailList: null
-  },
-  {
-    id: "1306",
-    typeId: "13",
-    value: "6",
-    name: "幼儿园中班",
-    parentId: "0",
-    comment: "幼儿园中班",
-    dictDetailList: null
-  },
-  {
-    id: "1307",
-    typeId: "13",
-    value: "7",
-    name: "幼儿园大班",
-    parentId: "0",
-    comment: "幼儿园大班",
-    dictDetailList: null
-  },
-  {
-    id: "1308",
-    typeId: "13",
-    value: "8",
-    name: "一年级",
-    parentId: "0",
-    comment: "一年级",
-    dictDetailList: null
-  },
-  {
-    id: "1309",
-    typeId: "13",
-    value: "9",
-    name: "二年级",
-    parentId: "0",
-    comment: "二年级",
-    dictDetailList: null
-  },
-  {
-    id: "1310",
-    typeId: "13",
-    value: "10",
-    name: "三年级",
-    parentId: "0",
-    comment: "三年级",
-    dictDetailList: null
-  },
-  {
-    id: "1311",
-    typeId: "13",
-    value: "11",
-    name: "四年级",
-    parentId: "0",
-    comment: "四年级",
-    dictDetailList: null
-  },
-  {
-    id: "1312",
-    typeId: "13",
-    value: "12",
-    name: "五年级",
-    parentId: "0",
-    comment: "五年级",
-    dictDetailList: null
-  },
-  {
-    id: "1313",
-    typeId: "13",
-    value: "13",
-    name: "六年级",
-    parentId: "0",
-    comment: "六年级",
-    dictDetailList: null
-  },
-  {
-    id: "1314",
-    typeId: "13",
-    value: "14",
-    name: "七年级",
-    parentId: "0",
-    comment: "七年级",
-    dictDetailList: null
-  },
-  {
-    id: "1315",
-    typeId: "13",
-    value: "15",
-    name: "八年级",
-    parentId: "0",
-    comment: "八年级",
-    dictDetailList: null
-  },
-  {
-    id: "1316",
-    typeId: "13",
-    value: "16",
-    name: "九年级",
-    parentId: "0",
-    comment: "九年级",
-    dictDetailList: null
-  },
-  {
-    id: "1317",
-    typeId: "13",
-    value: "17",
-    name: "高中一年级",
-    parentId: "0",
-    comment: "高中一年级",
-    dictDetailList: null
-  },
-  {
-    id: "1318",
-    typeId: "13",
-    value: "18",
-    name: "高中二年级",
-    parentId: "0",
-    comment: "高中二年级",
-    dictDetailList: null
-  },
-  {
-    id: "1319",
-    typeId: "13",
-    value: "19",
-    name: "高中三年级",
-    parentId: "0",
-    comment: "高中三年级",
-    dictDetailList: null
-  }
-];
-const getAllParents = (key, childName, tree, arrKeys = []) => {
-  if (!key || tree.length == 0) {
-    return [];
-  }
-  const getParentKey = (key, tree) => {
-    let parentKey;
-    for (let i = 0; i < tree.length; i++) {
-      const node = tree[i];
-      if (node[childName]) {
-        if (
-          node[childName].some(item => item.id.toString() === key.toString())
-        ) {
-          parentKey = node.id;
-        } else if (getParentKey(key, node[childName])) {
-          parentKey = getParentKey(key, node[childName]);
-        }
-      }
-    }
-    return parentKey;
-  };
-  const getParentKeys = key => {
-    if (!key) {
-      return;
-    }
-    arrKeys.unshift(key);
-    const parent = getParentKey(key, tree);
-    if (parent) {
-      getParentKeys(parent);
-    }
-  };
-  getParentKeys(key);
-  return arrKeys;
-};
-console.log(getAllParents("130232", "dictDetailList", treeData));
+import Vue from "vue";
+// /**权限指令**/
+// const checkAuth = Vue.directive('checkAuth', {
+//  bind: function (el, binding, vnode) {
+//   // 获取按钮权限
+//   let btnPermissions = vnode.context.$route.meta.btnPermissions.split(",");
+//   if (!Vue.prototype.$_checkAuth(btnPermissions)) {
+//      el.parentNode.removeChild(el);
+//   }
+//  }
+// });
+// // 权限检查方法
+// Vue.prototype.$_checkAuth = function (value) {
+//  let isExist = false;
+//  let btnPermissionsStr = sessionStorage.getItem("btnPermissions");
+//  if (btnPermissionsStr == undefined || btnPermissionsStr == null) {
+//   return false;
+//  }
+//  if (value.indexOf(btnPermissionsStr) > -1) {
+//   isExist = true;
+//  }
+//  return isExist;
+// };
+
 export default {
   name: "dashboard",
   data() {
@@ -850,7 +231,8 @@ export default {
         bgColor: "#F5F8FD",
         bottomPadding: 30,
         topPadding: 30
-      }
+      },
+      authCodes: {}
     };
   },
   components: {
@@ -864,7 +246,7 @@ export default {
   created() {
     this.handleListener();
     this.changeDate();
-    console.log(shortid());
+    this.getAuthCode();
   },
   activated() {
     this.handleListener();
@@ -874,6 +256,20 @@ export default {
     this.$root.Bus.$off("collapse", this.handleBus);
   },
   methods: {
+    getAuthCode() {  //获取权限
+      this.$API.getAuchCodes().then(res => {
+        const { status, message, data } = res;
+        if (status == 200) {
+          const { sysUserCustomList } = data;
+          let code = {};
+          sysUserCustomList.forEach(item => {
+            code[item.code] = item;
+          });
+          console.log(code);
+          this.authCodes = code;
+        }
+      });
+    },
     changeDate() {
       const now = new Date().getTime();
       this.data.forEach((item, index) => {
@@ -895,6 +291,35 @@ export default {
     renderChart() {
       this.$refs.bar.renderChart();
       this.$refs.line.renderChart();
+    }
+  },
+  directives: {
+    checkVisible: {
+      update(el, binding, vnode) {
+        const authItem = binding.value;
+        if (!authItem) {
+          el.style.display = "none";
+        } else {
+          if (!authItem.isVisible) {//false
+            el.style.display = "none";
+          }
+          if (!authItem.isRequired) {//false
+            el.querySelector('.required').display='block';
+          }
+        }
+      }
+    },
+    checkRequired: {
+      update(el, binding, vnode) {
+        const authItem = binding.value;
+        if (!authItem) {
+          el.style.display = "none";
+        } else {
+          if (!authItem.isRequired) {
+            el.style.display = "none";
+          }
+        }
+      }
     }
   }
 };
@@ -932,7 +357,9 @@ export default {
   line-height: 100px;
   color: #fff;
 }
-
+/* .required{
+  display: none;
+} */
 .grid-con-1 .grid-con-icon {
   background: rgb(45, 140, 240);
 }

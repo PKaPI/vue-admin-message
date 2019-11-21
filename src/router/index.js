@@ -9,6 +9,10 @@ const Home = () => ({
     component: import('@/pages/home/index'),
     loading: Loading
 });
+const Anysise = () => ({
+    component: import('@/pages/anysise/analysis'),
+    loading: Loading
+});
 const Login = () => ({
     component: import('@/pages/login/index'),
     loading: Loading
@@ -40,7 +44,7 @@ export default new Router({
             children:[
                 {
                     path: '/home',
-                    component: Home,
+                    component: Anysise,
                     meta: { title: '系统首页' }
                 },
                 {

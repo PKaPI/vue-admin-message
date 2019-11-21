@@ -1,0 +1,155 @@
+{
+  "msg": "操作成功",
+  "status": 200,
+  "timestamp": 1572599815312,
+  "data": {
+    "typeId": 64,
+    "typeName": "工单试听分析",
+    "roles": "22,16,18",
+    "state": true,
+    "createTime": "2019-09-24 22:12:09",
+    "createUser": 1,
+    "updateTime": "2019-11-01 17:04:26",
+    "updateUser": 1,
+    "sysUserCustomList": [
+      {
+        "relativeId": 64,
+        "type": "workOrder",
+        "code": "category",
+        "seq": null,
+        "isVisible": true,
+        "isRequired": true,
+        "configName": "类目"
+      },
+      {
+        "relativeId": 64,
+        "type": "workOrder",
+        "code": "childName",
+        "seq": null,
+        "isVisible": true,
+        "isRequired": true,
+        "configName": "孩子姓名"
+      },
+      {
+        "relativeId": 64,
+        "type": "workOrder",
+        "code": "childGrade",
+        "seq": null,
+        "isVisible": true,
+        "isRequired": true,
+        "configName": "孩子年级"
+      },
+      {
+        "relativeId": 64,
+        "type": "workOrder",
+        "code": "childBase",
+        "seq": null,
+        "isVisible": true,
+        "isRequired": true,
+        "configName": "孩子基础"
+      },
+      {
+        "relativeId": 64,
+        "type": "workOrder",
+        "code": "source",
+        "seq": null,
+        "isVisible": true,
+        "isRequired": true,
+        "configName": "来源"
+      },
+      {
+        "relativeId": 64,
+        "type": "workOrder",
+        "code": "listenInstitution",
+        "seq": null,
+        "isVisible": true,
+        "isRequired": true,
+        "configName": "试听机构"
+      },
+      {
+        "relativeId": 64,
+        "type": "workOrder",
+        "code": "isAnalysed",
+        "seq": null,
+        "isVisible": true,
+        "isRequired": true,
+        "configName": "是否已分析"
+      },
+      {
+        "relativeId": 64,
+        "type": "workOrder",
+        "code": "videos",
+        "seq": null,
+        "isVisible": true,
+        "isRequired": true,
+        "configName": "试听视频"
+      },
+      {
+        "relativeId": 64,
+        "type": "workOrder",
+        "code": "intentionInstitution",
+        "seq": null,
+        "isVisible": true,
+        "isRequired": false,
+        "configName": "意向机构"
+      },
+      {
+        "relativeId": 64,
+        "type": "workOrder",
+        "code": "parentAttention",
+        "seq": null,
+        "isVisible": true,
+        "isRequired": false,
+        "configName": "家长关注"
+      },
+      {
+        "relativeId": 64,
+        "type": "workOrder",
+        "code": "remark",
+        "seq": null,
+        "isVisible": true,
+        "isRequired": false,
+        "configName": "备注说明"
+      },
+      {
+        "relativeId": 64,
+        "type": "workOrder",
+        "code": "images",
+        "seq": null,
+        "isVisible": true,
+        "isRequired": false,
+        "configName": "上传图片"
+      },
+      {
+        "relativeId": 64,
+        "type": "workOrder",
+        "code": "videoUrls",
+        "seq": null,
+        "isVisible": true,
+        "isRequired": true,
+        "configName": "视频链接"
+      },
+      {
+        "relativeId": 64,
+        "type": "workOrder",
+        "code": "videoAccount",
+        "seq": null,
+        "isVisible": true,
+        "isRequired": false,
+        "configName": "视频账号"
+      },
+      {
+        "relativeId": 64,
+        "type": "workOrder",
+        "code": "videoPwd",
+        "seq": null,
+        "isVisible": true,
+        "isRequired": false,
+        "configName": "视频密码"
+      }
+    ],
+    "rolesList": [22, 16, 18],
+    "userName": null
+  },
+  "ext": null
+}
