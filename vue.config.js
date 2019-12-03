@@ -12,6 +12,7 @@ module.exports = {
   publicPath: "./",
   productionSourceMap: false,
   devServer: {
+    disableHostCheck: true,
     proxy: {
       "/crm": {
         target: "http://192.168.20.182:8080",
